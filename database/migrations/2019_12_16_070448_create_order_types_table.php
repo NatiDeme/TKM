@@ -15,6 +15,8 @@ class CreateOrderTypesTable extends Migration
     {
         Schema::create('order_types', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->double('price');
             $table->timestamps();
         });
     }

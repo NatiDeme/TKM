@@ -15,6 +15,14 @@ class CreateTicketsTable extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title');
+            $table->string('sub_title');
+            $table->date('date');
+            $table->string('venue');
+            $table->string('city');
+            $table->double('price');
+            $table->string('additional_info');
+            $table->string('approved');
             $table->timestamps();
         });
     }
